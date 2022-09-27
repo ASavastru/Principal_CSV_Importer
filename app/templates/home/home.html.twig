@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Home Page{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="/assets/Calendar.css">
@@ -12,5 +12,6 @@
 {% endblock %}
 
 {% block body %}
-    balut
+    <p>click button below to go to the .csv file upload page</p>
+    <button id="fileReadButton" onclick="window.location.href = '/upload_file'">Upload File</button>
 {% endblock %}
