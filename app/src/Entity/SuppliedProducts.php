@@ -26,9 +26,6 @@ class SuppliedProducts
     #[ORM\Column]
     private ?int $quantity = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $restockDate = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -78,18 +75,6 @@ class SuppliedProducts
     public function setQuantity(int $quantity): self
     {
         $this->quantity = $quantity;
-
-        return $this;
-    }
-
-    public function getRestockDate(): ?\DateTimeInterface
-    {
-        return $this->restockDate;
-    }
-
-    public function setRestockDate(\DateTimeInterface $restockDate): self
-    {
-        $this->restockDate = $restockDate;
 
         return $this;
     }
